@@ -14,7 +14,7 @@ router.post('/register', async (req, res) => {
 });
 
 // קבלת כל המשתמשים (לדוגמה בלבד)
-router.get('/', async (req, res) => {
+router.get('/allUsers', async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
